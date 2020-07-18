@@ -1,0 +1,36 @@
+.dark-mode{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1em;
+}
+
+.checkbox{
+    display: none;
+}
+
+.checkbox:checked ~ .switch::before{
+    transform: translateX(40px);
+}
+
+.switch{
+    width: 80px;
+    height: 40px;
+    display: block;
+    border-radius: 20px;
+    background: var(--switch);
+    padding: 5px;
+    box-sizing: border-box;
+    cursor: pointer;
+    user-select: none;
+} 
+
+.switch::before{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: var(--switch-spinner);
+    border-radius: 50%;
+    transform: translateX(0px);
+    transition: ease all 0.3s;
+}
